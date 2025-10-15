@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|c:\\users\\usuario\\source\\repos\\sequortest\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\tile user control\\orderstile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:tile user control\\orderstile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|c:\\users\\usuario\\source\\repos\\sequortest\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\tile user control\\orderstile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:tile user control\\orderstile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\sequortest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -57,17 +57,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.Designer.cs",
               "RelativeToolTip": "MainForm.Designer.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAD4v5wAAAAAAAAA",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAAAJwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-15T12:29:12.045Z",
               "IsPinned": true,
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -87,13 +87,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBMAAAANAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowCgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-15T18:43:31.327Z",
               "EditorCaption": ""
@@ -108,12 +108,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T18:04:36.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T18:04:36.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "OrdersTile.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Tile User Control\\OrdersTile.cs",
               "RelativeDocumentMoniker": "Tile User Control\\OrdersTile.cs",
@@ -121,8 +120,7 @@
               "RelativeToolTip": "Tile User Control\\OrdersTile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T17:58:19.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T17:58:19.82Z"
             },
             {
               "$type": "Document",
@@ -134,8 +132,7 @@
               "RelativeToolTip": "SequorTest.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-15T17:59:26.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T17:59:26.988Z"
             },
             {
               "$type": "Document",
@@ -146,8 +143,7 @@
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Tile User Control\\OrdersTile.cs [Projeto]",
               "RelativeToolTip": "Tile User Control\\OrdersTile.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T17:55:13.047Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-10-15T17:55:13.047Z"
             },
             {
               "$type": "Document",
@@ -159,8 +155,7 @@
               "RelativeToolTip": "Tile User Control\\OrdersTile.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T17:55:17.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T17:55:17.916Z"
             },
             {
               "$type": "Document",
@@ -172,8 +167,7 @@
               "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\metroframework\\1.2.0.3\\README.TXT",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-15T17:52:32.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T17:52:32.874Z"
             },
             {
               "$type": "Document",
@@ -196,8 +190,7 @@
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Properties\\Resources.resx",
               "RelativeToolTip": "Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-10-15T12:35:31.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T12:35:31.612Z"
             },
             {
               "$type": "Document",
@@ -208,8 +201,7 @@
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\SequorTest.csproj",
               "RelativeToolTip": "SequorTest.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-15T13:41:41.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T13:41:41.811Z"
             }
           ]
         }
