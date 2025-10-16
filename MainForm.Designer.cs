@@ -123,9 +123,9 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.sequor_mes;
-            pictureBox1.Location = new Point(590, 175);
+            pictureBox1.Location = new Point(556, 159);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(275, 149);
+            pictureBox1.Size = new Size(309, 165);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;

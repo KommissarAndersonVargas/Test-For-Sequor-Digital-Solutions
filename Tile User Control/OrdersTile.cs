@@ -17,6 +17,11 @@ namespace SequorTest.Tile_User_Control
         Label lblDescription;
         Label lblTime;
         Label lblCount;
+        public string MaterialCode => lblMaterialCode.Text;
+        public string MaterialName => lblMaterialName.Text;
+        public string Description => lblDescription.Text;
+        public string Time => lblTime.Text;
+        public string Count => lblCount.Text;
 
         private Random random = new Random();
 
@@ -39,7 +44,7 @@ namespace SequorTest.Tile_User_Control
             // code label
             lblMaterialCode = new Label()
             {
-                Text = "100004367538",
+                Text = String.Concat("1000043675", random.Next(101).ToString()),
                 Font = new Font("Segoe UI", 9, FontStyle.Regular),
                 Location = new Point(10, 8),
                 AutoSize = true
