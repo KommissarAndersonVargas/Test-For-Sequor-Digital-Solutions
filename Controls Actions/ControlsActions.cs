@@ -22,7 +22,11 @@ namespace SequorTest.Controls_Actions
 
         public static System.Windows.Forms.Label? lblMutableProductedOrders;
 
-        public static int segundos = 0;
+        public static System.Windows.Forms.Timer? buildTimer;
+
+        public static int counterForBuildTimer = 0;
+
+        public static int counterSecounds = 0;
 
         public static void CreateProdcutionInterface(Panel backPanel)
         {
@@ -34,9 +38,9 @@ namespace SequorTest.Controls_Actions
             AddsContOrdersProcuedLbl(backPanel);
         }
 
-        public static void AtualizarLabel()
+        public static void UpdateTimerLabel()
         {
-           lblTimerProduction.Text = segundos.ToString() + " s";
+           lblTimerProduction.Text = counterSecounds.ToString() + " s";
         }
 
         private static void AddsLabelInformation(Panel backPanel)
@@ -222,7 +226,7 @@ namespace SequorTest.Controls_Actions
 
         public static void ShowSelectedTileInfo(object sender) // SE DER ERRO TIRAR O STATIC
         {
-            lblTimerProduction.Text = String.Concat(segundos.ToString(), " s");
+            lblTimerProduction.Text = String.Concat(counterSecounds.ToString(), " s");
 
             if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
             {
@@ -234,9 +238,9 @@ namespace SequorTest.Controls_Actions
 
         public static void ReStartTimer()
         {
-            if(segundos > 0)
+            if(counterSecounds > 0)
             {
-                segundos = 0; 
+                counterSecounds = 0; 
             }
             else
             {
