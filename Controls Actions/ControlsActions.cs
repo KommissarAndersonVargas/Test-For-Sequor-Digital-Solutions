@@ -150,12 +150,32 @@ namespace SequorTest.Controls_Actions
             }
           
         }
-        public static void SendInfoForButton(FlowLayoutPanel displayTilesPnlLayout, Panel backPanel)
+        public static void SendInfoForButton(FlowLayoutPanel displayTilesPnlLayout, Panel backPanel, string email)
         {
-            displayTilesPnlLayout.Padding = new Padding(10);
-            var Orders = ManagementProctionsAPI.GetOrders();
-            SetTilesValuesForForm(Orders, displayTilesPnlLayout);
-            CreateProdcutionInterface(backPanel); //Enable the Build Interface
+            if (ValidateEmail(email))
+            {
+                displayTilesPnlLayout.Padding = new Padding(10);
+                var Orders = ManagementProctionsAPI.GetOrders();
+                SetTilesValuesForForm(Orders, displayTilesPnlLayout);
+                CreateProdcutionInterface(backPanel); //Enable the Build Interface
+            }
+            else
+            {
+                MessageBox.Show("Email null or not authorized", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+        }
+
+        public static bool ValidateEmail(string email)
+        {
+            if(email.Contains("sequor".ToUpper()) || email.Contains("sequor".ToLower()))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private static void SetTilesValuesForForm(List<Order> Orders, FlowLayoutPanel displayTilesPnlLayout)
@@ -193,9 +213,10 @@ namespace SequorTest.Controls_Actions
             };
         }
 
-        public static void ShowSelectedTileInfo(object sender) // SE DER ERRO TIRAR O STATIC
+        public static void ShowSelectedTileInfo(object sender, int segundos) // SE DER ERRO TIRAR O STATIC
         {
-            
+            lblTimerProduction.Text = String.Concat(segundos.ToString(), " s");
+
             if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
             {
                 lblProductionOrder.Text = $"PRODUCTION ORDER: {info.Ordem}";

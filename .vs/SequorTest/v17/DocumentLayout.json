@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|c:\\users\\usuario\\source\\repos\\sequortest\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|c:\\users\\usuario\\source\\repos\\sequortest\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\controls actions\\controlsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:controls actions\\controlsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\apis\\managementproctionsapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\tile user control\\orderstile.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:tile user control\\orderstile.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\controls actions\\controlsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:controls actions\\controlsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\files\\ordersexample.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -71,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:sequortest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|C:\\Users\\Usuario\\source\\repos\\SequorTest\\tile user control\\orderstile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7EAED59-E76C-4B9C-9427-B4D1B4775702}|SequorTest.csproj|solutionrelative:tile user control\\orderstile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -97,11 +97,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
@@ -115,44 +115,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrdersTile.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Tile User Control\\OrdersTile.cs",
-              "RelativeDocumentMoniker": "Tile User Control\\OrdersTile.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Tile User Control\\OrdersTile.cs",
-              "RelativeToolTip": "Tile User Control\\OrdersTile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T17:58:19.82Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManagementProctionsAPI.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\APIs\\ManagementProctionsAPI.cs",
-              "RelativeDocumentMoniker": "APIs\\ManagementProctionsAPI.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\APIs\\ManagementProctionsAPI.cs",
-              "RelativeToolTip": "APIs\\ManagementProctionsAPI.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAqwAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T13:16:21.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAuwDEAAAAoAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwCUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-15T18:43:31.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "OrdersTile.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Tile User Control\\OrdersTile.Designer.cs",
               "RelativeDocumentMoniker": "Tile User Control\\OrdersTile.Designer.cs",
@@ -164,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -176,19 +152,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ControlsActions.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Controls Actions\\ControlsActions.cs",
               "RelativeDocumentMoniker": "Controls Actions\\ControlsActions.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Controls Actions\\ControlsActions.cs",
               "RelativeToolTip": "Controls Actions\\ControlsActions.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAIwJ4AAAAJAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAWwBQAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T23:31:10.24Z"
+              "WhenOpened": "2025-10-15T23:31:10.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T18:04:36.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManagementProctionsAPI.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\APIs\\ManagementProctionsAPI.cs",
+              "RelativeDocumentMoniker": "APIs\\ManagementProctionsAPI.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\APIs\\ManagementProctionsAPI.cs",
+              "RelativeToolTip": "APIs\\ManagementProctionsAPI.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T13:16:21.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrdersTile.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Tile User Control\\OrdersTile.cs",
+              "RelativeDocumentMoniker": "Tile User Control\\OrdersTile.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Tile User Control\\OrdersTile.cs",
+              "RelativeToolTip": "Tile User Control\\OrdersTile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T17:58:19.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "OrdersExample.json",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Files\\OrdersExample.json",
               "RelativeDocumentMoniker": "Files\\OrdersExample.json",
@@ -200,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MaterialInfo.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\BaseClasses\\MaterialInfo.cs",
               "RelativeDocumentMoniker": "BaseClasses\\MaterialInfo.cs",
@@ -212,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\BaseClasses\\Order.cs",
               "RelativeDocumentMoniker": "BaseClasses\\Order.cs",
@@ -224,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Orders.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\BaseClasses\\Orders.cs",
               "RelativeDocumentMoniker": "BaseClasses\\Orders.cs",
@@ -236,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "BaseInfo.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\BaseClasses\\BaseInfo.cs",
               "RelativeDocumentMoniker": "BaseClasses\\BaseInfo.cs",
@@ -248,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "OrderMaterial.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\BaseClasses\\OrderMaterial.cs",
               "RelativeDocumentMoniker": "BaseClasses\\OrderMaterial.cs",
@@ -260,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserControlFactorycs.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Factories\\UserControlFactorycs.cs",
               "RelativeDocumentMoniker": "Factories\\UserControlFactorycs.cs",
@@ -272,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "BaseClasesFactory.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Factories\\BaseClasesFactory.cs",
               "RelativeDocumentMoniker": "Factories\\BaseClasesFactory.cs",
@@ -284,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
@@ -296,18 +310,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T18:04:36.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "SequorTest.csproj",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SequorTest\\SequorTest.csproj",
               "RelativeDocumentMoniker": "SequorTest.csproj",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SequorTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f2b9d8b371e5b8b35535b211de3d6ae18dc4f39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ee5e12a788b7dd75813f9d142281d2414435c61")]
 [assembly: System.Reflection.AssemblyProductAttribute("SequorTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SequorTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

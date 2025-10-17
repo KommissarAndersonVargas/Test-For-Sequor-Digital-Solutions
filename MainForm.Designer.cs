@@ -69,7 +69,6 @@
             // 
             // SearchButton
             // 
-            SearchButton.FlatAppearance.BorderSize = 0;
             SearchButton.FlatStyle = FlatStyle.Flat;
             SearchButton.Image = Properties.Resources.search_zoom;
             SearchButton.Location = new Point(282, 12);
@@ -77,6 +76,7 @@
             SearchButton.Size = new Size(46, 40);
             SearchButton.TabIndex = 2;
             SearchButton.UseVisualStyleBackColor = true;
+            SearchButton.Click += SearchButton_Click;
             // 
             // displayTilesPnlLayout
             // 
