@@ -12,19 +12,21 @@ namespace SequorTest.Controls_Actions
 {
     public class ControlsActions
     {
-        public static System.Windows.Forms.Label ?lblProductionOrder;
+        public static System.Windows.Forms.Label? lblProductionOrder;
 
-        public static System.Windows.Forms.Label ?lblMaterialCode;
+        public static System.Windows.Forms.Label? lblMaterialCode;
 
-        public static System.Windows.Forms.Label ?lblMaterialDescription;
+        public static System.Windows.Forms.Label? lblMaterialDescription;
 
         public static System.Windows.Forms.Label? lblTimerProduction;
 
         public static System.Windows.Forms.Label? lblMutableProductedOrders;
 
-        public static System.Windows.Forms.Timer? buildTimer;
+        public static bool emailStatus;
 
-        public static int counterForBuildTimer = 0;
+        public static double initalTimeFromFile = 0;
+
+        public static double fillingTime = 0; // the last recorded time registered by counterForBuildTime 
 
         public static int counterSecounds = 0;
 
@@ -40,7 +42,7 @@ namespace SequorTest.Controls_Actions
 
         public static void UpdateTimerLabel()
         {
-           lblTimerProduction.Text = counterSecounds.ToString() + " s";
+            lblTimerProduction.Text = counterSecounds.ToString() + " s";
         }
 
         private static void AddsLabelInformation(Panel backPanel)
@@ -159,7 +161,7 @@ namespace SequorTest.Controls_Actions
 
                 backPanel.Controls.Add(lblMutableProductedOrders);
             }
-          
+
         }
         public static void SendInfoForButton(FlowLayoutPanel displayTilesPnlLayout, Panel backPanel, string email)
         {
@@ -174,13 +176,14 @@ namespace SequorTest.Controls_Actions
             {
                 MessageBox.Show("Email null or not authorized", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
         }
 
         public static bool ValidateEmail(string email)
         {
-            if(email.Contains("sequor".ToUpper()) || email.Contains("sequor".ToLower()))
+            if (email.Contains("sequor".ToUpper()) || email.Contains("sequor".ToLower()))
             {
+                emailStatus = true;
                 return true;
             }
             else
@@ -226,8 +229,6 @@ namespace SequorTest.Controls_Actions
 
         public static void ShowSelectedTileInfo(object sender) // SE DER ERRO TIRAR O STATIC
         {
-            lblTimerProduction.Text = String.Concat(counterSecounds.ToString(), " s");
-
             if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
             {
                 lblProductionOrder.Text = $"PRODUCTION ORDER: {info.Ordem}";
@@ -236,15 +237,52 @@ namespace SequorTest.Controls_Actions
             }
         }
 
+        public static void GetFileProductionTime(object sender)
+        {
+            if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
+            {
+                initalTimeFromFile = double.Parse(tile.lblTime.Text.ToString());
+            }
+        }
+
+        public static bool BuildProductionTimeFromApp()
+        {
+            fillingTime = counterSecounds;
+            if (fillingTime >= initalTimeFromFile && emailStatus)
+            {
+                MessageBox.Show("Cycle Time was sucessfully registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Production Time Invalid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+        }
+
+        public static void SetToUpdateTimerLabel()
+        {
+            lblTimerProduction.Text = String.Concat(counterSecounds.ToString(), " s");
+        }
+
         public static void ReStartTimer()
         {
-            if(counterSecounds > 0)
+            if (counterSecounds > 0)
             {
-                counterSecounds = 0; 
+                counterSecounds = 0;
             }
             else
             {
                 return;
+            }
+        }
+
+        public static void CalculateProductionTime(System.Windows.Forms.Timer productionTimer)
+        {
+            if (BuildProductionTimeFromApp())
+            {
+                ReStartTimer();
+                productionTimer.Stop();
             }
         }
     }
