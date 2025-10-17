@@ -1,4 +1,5 @@
 using MetroFramework.Controls;
+using SequorTest.APIs;
 using SequorTest.BaseClasses;
 using SequorTest.Controls_Actions;
 using SequorTest.Tile_User_Control;
@@ -45,22 +46,19 @@ namespace SequorTest
         }
         public static void OrdersTile_Click(object sender, EventArgs e) // SE DER ERRO TIRAR O STATIC
         {
-            /*
-            if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
-            {
-           
-                lblProductionOrder.Text = $"PRODUCTION ORDER: {info.Ordem}";
-                lblMaterialCode.Text = $"MATERIAL CODE: {info.Codigo}";
-                lblMaterialDescription.Text = $"MATERIAL DESCRIPTION: {info.Descricao}";
-               // CreateInterface(backPanel);
-            */
 
             ControlsActions.ShowSelectedTileInfo(sender);
         }
 
         public static void BtnAddControls_Click(object sender, EventArgs e) 
         {
-            MessageBox.Show("This is a test");
+            var lista = ManagementProctionsAPI.GetOrders();
+
+            foreach (var order in lista)
+            {
+                MessageBox.Show($"{order.order}");
+            }
+
         }
     }
 }

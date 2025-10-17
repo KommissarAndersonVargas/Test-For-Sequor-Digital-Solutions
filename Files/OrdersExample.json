@@ -1,0 +1,38 @@
+[
+  {
+    "order": "111",
+    "quantity": 100.00,
+    "productCode": "abc",
+    "productDescription": "This is the material description",
+    "image": "0x000001",
+    "cycleTime": 30.3,
+    "materials": [
+      {
+        "materialCode": "aaa",
+        "materialDescription": "desc1"
+      },
+      {
+        "materialCode": "bbb",
+        "materialDescription": "desc2"
+      }
+    ]
+  },
+  {
+    "order": "222",
+    "quantity": 200.00,
+    "productCode": "def",
+    "productDescription": "yy",
+    "image": "0x000001",
+    "cycleTime": 10.5,
+    "materials": [
+      {
+        "materialCode": "ccc",
+        "materialDescription": "desc3"
+      },
+      {
+        "materialCode": "bbb",
+        "materialDescription": "desc2"
+      }
+    ]
+  }
+]

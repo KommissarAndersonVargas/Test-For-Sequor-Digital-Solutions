@@ -1,27 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SequorTest.Tile_User_Control
+﻿namespace SequorTest.Tile_User_Control
 {
     public partial class OrdersTile : UserControl
     {
-        Label lblMaterialCode;
-        Label lblMaterialName;
-        Label lblDescription;
-        Label lblTime;
-        Label lblCount;
-        public string MaterialCode => lblMaterialCode.Text;
-        public string MaterialName => lblMaterialName.Text;
-        public string Description => lblDescription.Text;
-        public string Time => lblTime.Text;
-        public string Count => lblCount.Text;
+        public Label lblMaterialCode;
+        public Label lblMaterialName;
+        public Label lblDescription;
+        public Label lblTime;
+        public Label lblCount;
 
         private Random random = new Random();
 
@@ -44,7 +29,7 @@ namespace SequorTest.Tile_User_Control
             // code label
             lblMaterialCode = new Label()
             {
-                Text = String.Concat("1000043675", random.Next(101).ToString()),
+                Text = "1000043675TESTE", //Default
                 Font = new Font("Segoe UI", 9, FontStyle.Regular),
                 Location = new Point(10, 8),
                 AutoSize = true
@@ -53,7 +38,7 @@ namespace SequorTest.Tile_User_Control
             // short material name
             lblMaterialName = new Label()
             {
-                Text = "MATERIAL01234",
+                Text = "MATERIAL01234TESTE", //Default
                 Font = new Font("Segoe UI", 9, FontStyle.Bold),
                 Location = new Point(10, 28),
                 AutoSize = true
@@ -62,7 +47,7 @@ namespace SequorTest.Tile_User_Control
             // description label
             lblDescription = new Label()
             {
-                Text = "Essa é a descrição completa de um material",
+                Text = "Essa é a descrição completa de um material TESTE", //Default
                 Font = new Font("Segoe UI", 8, FontStyle.Regular),
                 ForeColor = Color.Gray,
                 Location = new Point(10, 48),
@@ -72,7 +57,7 @@ namespace SequorTest.Tile_User_Control
             // time label
             lblTime = new Label()
             {
-                Text = "00:00:50",
+                Text = "00:00:00", //Default
                 Font = new Font("Segoe UI", 9, FontStyle.Bold),
                 Location = new Point(10, 70),
                 AutoSize = true
@@ -81,7 +66,7 @@ namespace SequorTest.Tile_User_Control
             // count label
             lblCount = new Label()
             {
-                Text = "0/10",
+                Text = "0/0", //Default
                 Font = new Font("Segoe UI", 9, FontStyle.Regular),
                 Location = new Point(250, 70),
                 AutoSize = true

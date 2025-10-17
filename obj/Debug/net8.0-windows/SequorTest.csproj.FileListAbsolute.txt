@@ -22,3 +22,4 @@ C:\Users\Usuario\source\repos\SequorTest\bin\Debug\net8.0-windows\MetroFramework
 C:\Users\Usuario\source\repos\SequorTest\bin\Debug\net8.0-windows\MetroFramework.dll
 C:\Users\Usuario\source\repos\SequorTest\obj\Debug\net8.0-windows\SequorTest.Tile_User_Control.OrdersTile.resources
 C:\Users\Usuario\source\repos\SequorTest\obj\Debug\net8.0-windows\SequorTest.sourcelink.json
+C:\Users\Usuario\source\repos\SequorTest\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
