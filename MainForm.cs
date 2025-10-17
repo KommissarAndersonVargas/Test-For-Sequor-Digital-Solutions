@@ -9,26 +9,18 @@ namespace SequorTest
 {
     public partial class Form1 : Form
     {
-        private static int segundos = 0;
-        private bool executando = false;
         private static System.Windows.Forms.Timer ?productionTimer;
         public Form1()
         {
             productionTimer = new System.Windows.Forms.Timer();
-            productionTimer.Interval = 1000; // 1000ms = 1 segundo
+            productionTimer.Interval = 1000; 
             productionTimer.Tick += Timer_Tick;
             InitializeComponent();
         }
-        private void Timer_Tick(object sender, EventArgs e)
+        private static void Timer_Tick(object sender, EventArgs e)
         {
-            segundos++;
-            AtualizarLabel();
-        }
-
-        private void AtualizarLabel()
-        {
-
-            ControlsActions.lblTimerProduction.Text = segundos.ToString() + " s";
+            ControlsActions.segundos++;
+            ControlsActions.AtualizarLabel();
         }
 
         private void SendInfoButton_Click(object sender, EventArgs e)
@@ -36,12 +28,14 @@ namespace SequorTest
         }
         public static void OrdersTile_Click(object sender, EventArgs e) // SE DER ERRO TIRAR O STATIC
         {
+            ControlsActions.ReStartTimer();
             productionTimer.Start();
-            ControlsActions.ShowSelectedTileInfo(sender, segundos);
+            ControlsActions.ShowSelectedTileInfo(sender);
         }
 
-        public static void BtnAddControls_Click(object sender, EventArgs e)
+        public static void BtnBuildProduction_Click(object sender, EventArgs e)
         {
+
         }
 
         private void SearchButton_Click(object sender, EventArgs e)

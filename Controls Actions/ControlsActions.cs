@@ -22,6 +22,8 @@ namespace SequorTest.Controls_Actions
 
         public static System.Windows.Forms.Label? lblMutableProductedOrders;
 
+        public static int segundos = 0;
+
         public static void CreateProdcutionInterface(Panel backPanel)
         {
             AddsLabelInformation(backPanel);
@@ -30,6 +32,11 @@ namespace SequorTest.Controls_Actions
             AddsTimerLabel(backPanel);
             AddsClockPictureBox(backPanel);
             AddsContOrdersProcuedLbl(backPanel);
+        }
+
+        public static void AtualizarLabel()
+        {
+           lblTimerProduction.Text = segundos.ToString() + " s";
         }
 
         private static void AddsLabelInformation(Panel backPanel)
@@ -93,7 +100,7 @@ namespace SequorTest.Controls_Actions
                 btnProduction.FlatAppearance.BorderSize = 2;
                 btnProduction.Size = new Size(100, 40);
                 btnProduction.Location = new Point(1260, 250);
-                btnProduction.Click += Form1.BtnAddControls_Click;
+                btnProduction.Click += Form1.BtnBuildProduction_Click;
 
                 backPanel.Controls.Add(btnProduction);
             }
@@ -213,7 +220,7 @@ namespace SequorTest.Controls_Actions
             };
         }
 
-        public static void ShowSelectedTileInfo(object sender, int segundos) // SE DER ERRO TIRAR O STATIC
+        public static void ShowSelectedTileInfo(object sender) // SE DER ERRO TIRAR O STATIC
         {
             lblTimerProduction.Text = String.Concat(segundos.ToString(), " s");
 
@@ -222,6 +229,18 @@ namespace SequorTest.Controls_Actions
                 lblProductionOrder.Text = $"PRODUCTION ORDER: {info.Ordem}";
                 lblMaterialCode.Text = $"MATERIAL CODE: {info.Name}";
                 lblMaterialDescription.Text = $"MATERIAL DESCRIPTION: {info.Descricao}";
+            }
+        }
+
+        public static void ReStartTimer()
+        {
+            if(segundos > 0)
+            {
+                segundos = 0; 
+            }
+            else
+            {
+                return;
             }
         }
     }
