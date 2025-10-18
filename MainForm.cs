@@ -29,9 +29,10 @@ namespace SequorTest
         }
         public static void OrdersTile_Click(object sender, EventArgs e) // SE DER ERRO TIRAR O STATIC
         {
-            
             ControlsActions.ShowSelectedTileInfo(sender);
             ControlsActions.GetFileProductionTime(sender);
+            ControlsActions.GetProducedPieces(sender);
+            ControlsActions.SetLblProductionTimeDefaultConfig();
         }
         
         public static void BtnBuildProduction_Click(object sender, EventArgs e)

@@ -30,6 +30,8 @@ namespace SequorTest.Controls_Actions
 
         public static int counterSecounds = 0;
 
+        public static string productionRelation;
+
         public static void CreateProdcutionInterface(Panel backPanel)
         {
             AddsLabelInformation(backPanel);
@@ -39,12 +41,30 @@ namespace SequorTest.Controls_Actions
             AddsClockPictureBox(backPanel);
             AddsContOrdersProcuedLbl(backPanel);
         }
-
         public static void UpdateTimerLabel()
         {
             lblTimerProduction.Text = counterSecounds.ToString() + " s";
         }
-
+        public static void GetProducedPieces(object sender)
+        {
+            if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
+            {
+                var lblValue = tile.lblCount.Text.ToString();
+                Random random = new Random();
+                productionRelation = String.Concat(random.Next(50, 300).ToString(), "/", lblValue);
+            }
+        }
+        public static void SetLblProductionTimeDefaultConfig()
+        {
+            if (!lblMutableProductedOrders.Text.Equals("0/0"))
+            {
+                lblMutableProductedOrders.Text = "0/0";
+            }
+            else
+            {
+                return;
+            }
+        }
         private static void AddsLabelInformation(Panel backPanel)
         {
             if (backPanel.Controls.ContainsKey("DesciptionLbl"))
@@ -69,7 +89,6 @@ namespace SequorTest.Controls_Actions
                 backPanel.Controls.Add(lblMaterialDescription);
             }
         }
-
         private static void AddsOrderPictureBox(Panel backPanel)
         {
             if (backPanel.Controls.ContainsKey("OrderPicBox"))
@@ -157,11 +176,10 @@ namespace SequorTest.Controls_Actions
             {
                 lblMutableProductedOrders = CreateLabelInfo("0/0");
                 lblMutableProductedOrders.Name = "OrdersQuantiLbl";
-                lblMutableProductedOrders.Location = new Point(1315, 300);
+                lblMutableProductedOrders.Location = new Point(1305, 300);
 
                 backPanel.Controls.Add(lblMutableProductedOrders);
             }
-
         }
         public static void SendInfoForButton(FlowLayoutPanel displayTilesPnlLayout, Panel backPanel, string email)
         {
@@ -176,9 +194,7 @@ namespace SequorTest.Controls_Actions
             {
                 MessageBox.Show("Email null or not authorized", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-
         public static bool ValidateEmail(string email)
         {
             if (email.Contains("sequor".ToUpper()) || email.Contains("sequor".ToLower()))
@@ -191,7 +207,6 @@ namespace SequorTest.Controls_Actions
                 return false;
             }
         }
-
         private static void SetTilesValuesForForm(List<Order> Orders, FlowLayoutPanel displayTilesPnlLayout)
         {
             foreach (var order in Orders)
@@ -201,12 +216,14 @@ namespace SequorTest.Controls_Actions
                 tile.lblMaterialName.Text = order.order;
                 tile.lblDescription.Text = order.productDescription;
                 tile.lblTime.Text = order.cycleTime.ToString();
+                tile.lblCount.Text = order.quantity.ToString();
 
                 var info = new MaterialInfo()
                 {
                     Ordem = $"{tile.lblMaterialCode.Text}",
                     Name = $"{tile.lblMaterialName.Text}",
-                    Descricao = $"{tile.lblDescription.Text}"
+                    Descricao = $"{tile.lblDescription.Text}",
+                    Quantity = $"{tile.lblCount.Text}"
                 };
 
 
@@ -215,7 +232,6 @@ namespace SequorTest.Controls_Actions
                 displayTilesPnlLayout.Controls.Add(tile); // adds the tile insede of the panel layout
             }
         }
-
         private static System.Windows.Forms.Label CreateLabelInfo(string texto)
         {
             return new System.Windows.Forms.Label()
@@ -226,7 +242,6 @@ namespace SequorTest.Controls_Actions
                 ForeColor = Color.Black
             };
         }
-
         public static void ShowSelectedTileInfo(object sender) // SE DER ERRO TIRAR O STATIC
         {
             if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
@@ -236,7 +251,6 @@ namespace SequorTest.Controls_Actions
                 lblMaterialDescription.Text = $"MATERIAL DESCRIPTION: {info.Descricao}";
             }
         }
-
         public static void GetFileProductionTime(object sender)
         {
             if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
@@ -244,13 +258,13 @@ namespace SequorTest.Controls_Actions
                 initalTimeFromFile = double.Parse(tile.lblTime.Text.ToString());
             }
         }
-
         public static bool BuildProductionTimeFromApp()
         {
             fillingTime = counterSecounds;
             if (fillingTime >= initalTimeFromFile && emailStatus)
             {
                 MessageBox.Show("Cycle Time was sucessfully registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblMutableProductedOrders.Text = productionRelation;
                 return true;
             }
             else
@@ -259,12 +273,10 @@ namespace SequorTest.Controls_Actions
                 return false;
             }
         }
-
         public static void SetToUpdateTimerLabel()
         {
             lblTimerProduction.Text = String.Concat(counterSecounds.ToString(), " s");
         }
-
         public static void ReStartTimer()
         {
             if (counterSecounds > 0)
@@ -276,7 +288,6 @@ namespace SequorTest.Controls_Actions
                 return;
             }
         }
-
         public static void CalculateProductionTime(System.Windows.Forms.Timer productionTimer)
         {
             if (BuildProductionTimeFromApp())
