@@ -1,5 +1,6 @@
 ﻿using SequorTest.APIs;
 using SequorTest.BaseClasses;
+using SequorTest.Factories;
 using SequorTest.Tile_User_Control;
 using System;
 using System.Collections.Generic;
@@ -186,8 +187,7 @@ namespace SequorTest.Controls_Actions
             if (ValidateEmail(email))
             {
                 displayTilesPnlLayout.Padding = new Padding(10);
-                var Orders = ManagementProctionsAPI.GetOrders();
-                SetTilesValuesForForm(Orders, displayTilesPnlLayout);
+                SetTilesValuesForForm(Orders.GetOrdersList(), displayTilesPnlLayout);
                 CreateProdcutionInterface(backPanel); //Enable the Build Interface
             }
             else
@@ -211,22 +211,19 @@ namespace SequorTest.Controls_Actions
         {
             foreach (var order in Orders)
             {
-                var tile = new OrdersTile();
+                var tile = UserControlFactorycs.UserControlFactory();
                 tile.lblMaterialCode.Text = order.productCode;
                 tile.lblMaterialName.Text = order.order;
                 tile.lblDescription.Text = order.productDescription;
                 tile.lblTime.Text = order.cycleTime.ToString();
                 tile.lblCount.Text = order.quantity.ToString();
 
-                var info = new MaterialInfo()
-                {
-                    Ordem = $"{tile.lblMaterialCode.Text}",
-                    Name = $"{tile.lblMaterialName.Text}",
-                    Descricao = $"{tile.lblDescription.Text}",
-                    Quantity = $"{tile.lblCount.Text}"
-                };
-
-
+                var info =BaseClasesFactory.MaterialInfoFactory(
+                    $"{tile.lblMaterialCode.Text}",
+                    $"{tile.lblMaterialName.Text}", 
+                    $"{tile.lblDescription.Text}",
+                    $"{tile.lblCount.Text}");
+               
                 tile.Tag = info;
                 tile.Click += Form1.OrdersTile_Click;
                 displayTilesPnlLayout.Controls.Add(tile); // adds the tile insede of the panel layout
