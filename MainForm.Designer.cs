@@ -72,7 +72,7 @@
             SearchButton.BackColor = Color.Transparent;
             SearchButton.FlatAppearance.BorderSize = 0;
             SearchButton.FlatStyle = FlatStyle.Flat;
-            SearchButton.Image = Properties.Resources.search_zoom;
+            SearchButton.Image = (Image)resources.GetObject("SearchButton.Image");
             SearchButton.Location = new Point(282, 12);
             SearchButton.Name = "SearchButton";
             SearchButton.Size = new Size(46, 40);
@@ -105,9 +105,8 @@
             // SearchTxtBox
             // 
             SearchTxtBox.Location = new Point(15, 12);
-            SearchTxtBox.Multiline = true;
             SearchTxtBox.Name = "SearchTxtBox";
-            SearchTxtBox.Size = new Size(258, 42);
+            SearchTxtBox.Size = new Size(258, 23);
             SearchTxtBox.TabIndex = 3;
             // 
             // backPanel

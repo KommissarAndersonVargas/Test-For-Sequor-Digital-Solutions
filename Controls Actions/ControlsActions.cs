@@ -1,9 +1,11 @@
-﻿using SequorTest.APIs;
+﻿using SequorTest.AdditinalForms;
+using SequorTest.APIs;
 using SequorTest.BaseClasses;
 using SequorTest.Factories;
 using SequorTest.Tile_User_Control;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +26,8 @@ namespace SequorTest.Controls_Actions
         public static System.Windows.Forms.Label? lblMutableProductedOrders;
 
         public static bool emailStatus;
+
+        public static string receivedEmail;
 
         public static double initalTimeFromFile = 0;
 
@@ -184,13 +188,14 @@ namespace SequorTest.Controls_Actions
         }
         public static void SendInfoForButton(FlowLayoutPanel displayTilesPnlLayout, Panel backPanel, string email)
         {
-            if (ValidateEmail(email))
+            try
             {
                 displayTilesPnlLayout.Padding = new Padding(10);
                 SetTilesValuesForForm(Orders.GetOrdersList(), displayTilesPnlLayout);
                 CreateProdcutionInterface(backPanel); //Enable the Build Interface
             }
-            else
+               
+            catch(Exception)
             {
                 MessageBox.Show("Email null or not authorized", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -207,20 +212,20 @@ namespace SequorTest.Controls_Actions
                 return false;
             }
         }
-        private static void SetTilesValuesForForm(List<Order> Orders, FlowLayoutPanel displayTilesPnlLayout)
+        private static async void SetTilesValuesForForm(List<Order> Orders, FlowLayoutPanel displayTilesPnlLayout)
         {
             foreach (var order in Orders)
             {
                 var tile = UserControlFactorycs.UserControlFactory();
-                tile.lblMaterialCode.Text = order.productCode;
-                tile.lblMaterialName.Text = order.order;
-                tile.lblDescription.Text = order.productDescription;
+                tile.lblMaterialCode.Text = String.Concat("Material code: ",order.productCode);
+                tile.lblMaterialName.Text = String.Concat("Order: ", order.order);
+                tile.lblDescription.Text = String.Concat("Description: ",order.productDescription);
                 tile.lblTime.Text = order.cycleTime.ToString();
-                tile.lblCount.Text = order.quantity.ToString();
-
+                tile.lblCount.Text = String.Concat("Count: ", order.quantity.ToString());
+                
                 var info =BaseClasesFactory.MaterialInfoFactory(
-                    $"{tile.lblMaterialCode.Text}",
-                    $"{tile.lblMaterialName.Text}", 
+                    $"{tile.lblMaterialName.Text}",
+                    $"{tile.lblMaterialCode.Text}", 
                     $"{tile.lblDescription.Text}",
                     $"{tile.lblCount.Text}");
                
@@ -243,9 +248,9 @@ namespace SequorTest.Controls_Actions
         {
             if (sender is OrdersTile tile && tile.Tag is MaterialInfo info)
             {
-                lblProductionOrder.Text = $"PRODUCTION ORDER: {info.Ordem}";
-                lblMaterialCode.Text = $"MATERIAL CODE: {info.Name}";
-                lblMaterialDescription.Text = $"MATERIAL DESCRIPTION: {info.Descricao}";
+                lblProductionOrder.Text = $"PRODUCTION ORDER: {info.Ordem.Replace("Order: ","")}";
+                lblMaterialCode.Text = $"MATERIAL CODE: {info.Name.Replace("Material code: ", "")}";
+                lblMaterialDescription.Text = $"MATERIAL DESCRIPTION: {info.Descricao.Replace("Description: ", "")}";
             }
         }
         public static void GetFileProductionTime(object sender)
@@ -255,13 +260,16 @@ namespace SequorTest.Controls_Actions
                 initalTimeFromFile = double.Parse(tile.lblTime.Text.ToString());
             }
         }
-        public static bool BuildProductionTimeFromApp()
+        public static bool BuildProductionTimeFromApp(string email)
         {
             fillingTime = counterSecounds;
-            if (fillingTime >= initalTimeFromFile && emailStatus)
+            if (fillingTime >= initalTimeFromFile)
             {
+                receivedEmail = email;
+                SetProd setProd = new SetProd(receivedEmail);
+                setProd.Show();
                 MessageBox.Show("Cycle Time was sucessfully registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lblMutableProductedOrders.Text = productionRelation;
+                lblMutableProductedOrders.Text = productionRelation.Replace("Count: ", "");
                 return true;
             }
             else
@@ -285,9 +293,9 @@ namespace SequorTest.Controls_Actions
                 return;
             }
         }
-        public static void CalculateProductionTime(System.Windows.Forms.Timer productionTimer)
+        public static void CalculateProductionTime(System.Windows.Forms.Timer productionTimer, string email)
         {
-            if (BuildProductionTimeFromApp())
+            if (BuildProductionTimeFromApp(email))
             {
                 ReStartTimer();
                 productionTimer.Stop();

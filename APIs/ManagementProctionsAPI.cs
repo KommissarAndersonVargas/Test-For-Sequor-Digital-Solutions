@@ -2,18 +2,22 @@
 using SequorTest.BaseClasses;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
+using System.Net;
 using System.Net.Http.Headers;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
 using System.Windows.Forms;
 
 namespace SequorTest.APIs
 {
     public static class ManagementProctionsAPI
     {
+        public static bool IsAPiWorking;
         public static List<Order> GetOrders()
         {
-            GetProductionFromAPI();
-
+            GetOrdersFromAPI();
             try
             {
                 string path = Path.Combine(@"C:\Users\Usuario\source\repos\SequorTest\Files\OrdersExample.json");
@@ -35,32 +39,79 @@ namespace SequorTest.APIs
             }
         }
 
-        public static async void GetProductionFromAPI()
+        public static bool SendProductionSync(ProductionFromAPI model)
         {
-             HttpClient client = new HttpClient();
             try
             {
-                client.BaseAddress = new Uri("https://localhost:7092");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(
-                   new MediaTypeWithQualityHeaderValue("application/json"));
+                string url = "https://localhost:7092/Production/SetProduction";
+                string json = JsonConvert.SerializeObject(model);
 
-                //string email = "testeteste@sequor.com.br"; //MUDAR
-                // string endpoint = $"Production/GetProduction?email={Uri.EscapeDataString(email)}";
- 
-                string endpoint = $"GetOrders";
-                HttpResponseMessage response = await client.GetAsync(endpoint);
-                var jsonFile = await response.Content.ReadAsStringAsync();
-                MessageBox.Show(jsonFile);
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = "POST";
+                request.ContentType = "application/json";
 
-                ProductionResponse responseObj = JsonConvert.DeserializeObject<ProductionResponse>(jsonFile);
+                using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+                {
+                    streamWriter.Write(json);
+                    streamWriter.Flush();
+                }
 
-                var ordersList = responseObj.productions;
+                var response = (HttpWebResponse)request.GetResponse();
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    IsAPiWorking = true;
+                    MessageBox.Show("The date was sent!","Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    IsAPiWorking = false;
+                    MessageBox.Show($"Error during sent: {response.StatusCode}","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Exceção: {ex.Message}");
+                MessageBox.Show($"Erro: {ex.Message}");
+                return false;
             }
         }
+
+        public static bool WasDataSent()
+        {
+            return IsAPiWorking;
+        }
+
+        public static List<Order> GetOrdersFromAPI()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:7092");
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(
+                        new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    string endpoint = "GetOrders";
+
+                  
+                    HttpResponseMessage response = client.GetAsync(endpoint).GetAwaiter().GetResult();
+                    string jsonFile = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
+
+                    var wrapper = JsonConvert.DeserializeObject<OrdersList>(jsonFile);
+                    var list = wrapper?.orders ?? new List<Order>();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao obter dados da API: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Order>();
+            }
+        }
+
     }
 }

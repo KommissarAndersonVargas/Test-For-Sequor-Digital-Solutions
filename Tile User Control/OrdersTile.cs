@@ -10,20 +10,16 @@
 
         private Random random = new Random();
 
-        public Color GenerateRandomColor()
+        public Color GenerateColor()
         {
-            int r = random.Next(80, 255);
-            int g = random.Next(150, 256);
-            int b = random.Next(150, 255);
-
-            return Color.FromArgb(r, g, b);
+            return Color.AliceBlue;
         }
 
         public OrdersTile()
         {
             InitializeComponent();
             this.Size = new Size(300, 100);
-            this.BackColor = GenerateRandomColor();
+            this.BackColor = GenerateColor();
             this.BorderStyle = BorderStyle.FixedSingle;
 
             // code label

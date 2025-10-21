@@ -11,7 +11,7 @@ namespace SequorTest.Factories
     {
         public static BaseInfo MaterialInfoFactory(string order, string name, string descricao, string quantity)
         {
-            return new MaterialInfo(order, name, descricao, quantity);
+            return new MaterialInfo( order, name, descricao, quantity);
         }
     }
 }

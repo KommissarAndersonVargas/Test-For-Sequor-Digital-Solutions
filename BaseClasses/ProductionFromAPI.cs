@@ -2,7 +2,7 @@
 
 namespace SequorTest.BaseClasses
 {
-    public class InputProductionAPI
+    public class ProductionFromAPI
     {
         [JsonPropertyName("email")]
         public string Email { get; set; } = string.Empty;
@@ -11,10 +11,10 @@ namespace SequorTest.BaseClasses
         public string Order { get; set; } = string.Empty;
 
         [JsonPropertyName("productionDate")]
-        public DateTime ProductionDate { get; set; }
+        public string ProductionDate { get; set; }
 
         [JsonPropertyName("productionTime")]
-        public TimeSpan ProductionTime { get; set; }
+        public string ProductionTime { get; set; }
 
         [JsonPropertyName("quantity")]
         public double Quantity { get; set; }
@@ -24,10 +24,13 @@ namespace SequorTest.BaseClasses
 
         [JsonPropertyName("cycleTime")]
         public double CycleTime { get; set; }
+
+        [JsonPropertyName("materials")]
+        public List<OrderMaterial> materials = new List<OrderMaterial>();
     }
 
-    public class ProductionResponse
+    public class InputOrders
     {
-        public List<InputProductionAPI> productions { get; set; }
+        public List<ProductionFromAPI> orders { get; set; }
     }
 }

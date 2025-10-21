@@ -63,6 +63,16 @@ namespace SequorTest.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7263838_passed_exam_test_examination_result_icon {
+            get {
+                object obj = ResourceManager.GetObject("_7263838_passed_exam_test_examination_result_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alarm_clock_bell_time {
             get {
                 object obj = ResourceManager.GetObject("alarm_clock_bell_time", resourceCulture);

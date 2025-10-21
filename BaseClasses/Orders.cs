@@ -6,20 +6,15 @@ namespace SequorTest.BaseClasses
     {
         public static List<Order> orders = new List<Order>();
 
-        public static void SetOrdersList(List<Order> _orders)
-        {
-            foreach(var anOrder in _orders)
-            {
-                orders.Add(anOrder);
-            }
-        }
-
         public static List<Order> GetOrdersList()
         {
             try 
             {
-                SetOrdersList(ManagementProctionsAPI.GetOrders());
-                return orders;
+                //SetOrdersList(ManagementProctionsAPI.GetOrders());
+                //return orders;
+
+                var ordersList = ManagementProctionsAPI.GetOrdersFromAPI();
+                return ordersList;
             }
 
             catch (Exception) 

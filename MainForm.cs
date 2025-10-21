@@ -10,6 +10,7 @@ namespace SequorTest
     public partial class Form1 : Form
     {
         private static System.Windows.Forms.Timer ?productionTimer;
+
         public Form1()
         {
             productionTimer = new System.Windows.Forms.Timer();
@@ -25,7 +26,7 @@ namespace SequorTest
 
         private void SendInfoButton_Click(object sender, EventArgs e)
         {
-            ControlsActions.CalculateProductionTime(productionTimer);
+            ControlsActions.CalculateProductionTime(productionTimer, SearchTxtBox.Text.ToString());
         }
         public static void OrdersTile_Click(object sender, EventArgs e) // SE DER ERRO TIRAR O STATIC
         {
